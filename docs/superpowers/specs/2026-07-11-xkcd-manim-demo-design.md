@@ -8,21 +8,24 @@ This is a private feasibility study. It is not the final original protagonist an
 
 ## Reference
 
-- Pose reference supplied by the user: `C:/Users/15694/AppData/Local/Temp/codex-clipboard-9569bc04-7de8-4471-aefd-110861323653.png`
+- Pose and limb-overlap reference supplied by the user: `C:/Users/15694/AppData/Local/Temp/codex-clipboard-9569bc04-7de8-4471-aefd-110861323653.png`
+- Overall composition, typography, and line-weight reference supplied by the user: `C:/Users/15694/AppData/Local/Temp/codex-clipboard-02e08f74-0c0b-4533-9770-1f423a900474.png`
 - Font supplied by the user: `C:/Users/15694/Downloads/HYTianZhenTi.ttf`
 
 ## Composition
 
-- Canvas: 1920×1080, warm white background.
-- Character: placed slightly left of center, large enough for line quality to be judged.
-- Text: `所以……动量真的没丢？`, placed above and to the right without a speech bubble.
+- Canvas: 1920×1080, pure white background.
+- Character: a bald Cueball-style study placed in the lower-right area, large enough for line quality to be judged.
+- Text: `所以……动量真的没丢？`, placed above the character without an enclosing speech bubble.
+- Speaker indication: one short, open curved leader line may connect the text area to the character; it must not form a bubble.
 - Text font: the internal family name read from `HYTianZhenTi.ttf`, not a guessed filename-derived name.
 
 ## Character Construction
 
-- Rebuild the supplied pose as named vector paths: head, torso, left arm, right arm, left leg, and right leg.
-- Preserve the reference's defining geometry: irregular large head, point-like neck/shoulder junction, narrow triangular torso, asymmetric limbs, curved endpoints, and deliberate overlaps.
-- Use black strokes with no artificial roughness filter. The hand-drawn effect comes from controlled Bézier geometry, not frame-by-frame noise.
+- Rebuild the supplied pose as named open vector paths: head, torso, left arm, right arm, left leg, and right leg.
+- Preserve the references' defining geometry: irregular large head, point-like neck/shoulder junction, asymmetric limbs, curved endpoints, and deliberate overlaps. The narrow triangular wedge in the first pose should arise from overlapping independent strokes rather than a filled body shape.
+- Use approximately uniform black strokes with round caps and joins, visually equivalent to 5–7 px at 1080p. Do not add an artificial roughness filter; the hand-drawn effect comes from controlled Bézier geometry, not frame-by-frame noise.
+- Give the head an opaque white fill so body strokes terminate cleanly behind it.
 - Import the paths into Manim as SVG/VMobject content. The final image must not contain the raster reference.
 
 ## Deliverables
