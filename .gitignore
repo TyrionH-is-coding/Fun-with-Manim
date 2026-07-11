@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 media/
 outputs/images/
+outputs/texts/
