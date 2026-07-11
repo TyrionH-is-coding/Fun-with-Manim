@@ -1,0 +1,1 @@
+"""Manim demo source package."""
