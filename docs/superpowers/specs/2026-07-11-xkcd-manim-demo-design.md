@@ -49,3 +49,7 @@ The licensed font file itself will remain outside the project and will not be co
 - No collision animation, formulas, or physics explanation.
 - No final original character design.
 - No HTML recording or mixed rendering pipeline.
+
+## Accepted Future Animation Fallback
+
+If articulated character motion does not preserve the drawing style, the character may remain a static vector group and only translate, enter, pause, or exit as a whole. Limb rigging is not required for the first production workflow.
