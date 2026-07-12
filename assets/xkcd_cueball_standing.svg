@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 420">
+  <g fill="none" stroke="#111111" stroke-width="17"
+     stroke-linecap="round" stroke-linejoin="round">
+    <g id="torso">
+      <path d="M130 132 L129 209"/>
+    </g>
+    <g id="left-arm">
+      <path d="M130 132 L94 213"/>
+    </g>
+    <g id="right-arm">
+      <path d="M130 132 L157 217"/>
+    </g>
+    <g id="left-leg">
+      <path d="M129 209 L97 310"/>
+    </g>
+    <g id="right-leg">
+      <path d="M129 209 L165 308"/>
+    </g>
+    <g id="head" fill="#ffffff">
+      <path d="M130 26.7 C104.9 26.7 86.6 40.2 84.6 69.2 C80.8 97.2 97.2 121.4 123.2 128.1 C149.3 133 170.5 114.6 175.4 85.6 C180.2 56.7 167.6 32.5 146.4 27.7 C140.6 25.7 135.8 25.7 130 26.7 Z"/>
+    </g>
+  </g>
+</svg>
