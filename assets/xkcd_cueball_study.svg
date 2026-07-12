@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 420">
-  <g fill="none" stroke="#111111" stroke-width="6"
+  <g fill="none" stroke="#111111" stroke-width="8"
      stroke-linecap="round" stroke-linejoin="round">
     <g id="torso">
-      <path d="M131 126 C128 158 131 205 132 255"/>
+      <path d="M130 133 C128 164 131 205 132 255"/>
     </g>
     <g id="left-arm">
-      <path d="M130 154 C113 168 99 194 78 207 C68 213 58 212 48 216"/>
+      <path d="M130 133 C114 158 99 194 78 207 C68 213 58 212 48 216"/>
     </g>
     <g id="right-arm">
-      <path d="M132 155 C145 172 153 194 164 221"/>
+      <path d="M130 133 C145 158 153 194 164 221"/>
     </g>
     <g id="left-leg">
       <path d="M132 254 C122 281 112 317 102 365"/>
@@ -18,7 +18,7 @@
       <path d="M132 254 C143 282 157 318 171 360"/>
     </g>
     <g id="head" fill="#ffffff">
-      <path d="M130 24 C101 22 82 38 79 66 C76 93 93 118 121 125 C150 131 174 113 181 85 C187 58 175 33 151 26 C143 24 136 23 130 24 Z"/>
+      <path d="M130 20 C104 18 86 35 83 66 C80 97 97 123 123 131 C150 136 171 116 176 84 C181 53 169 27 147 21 C141 19 135 19 130 20 Z"/>
     </g>
   </g>
 </svg>
