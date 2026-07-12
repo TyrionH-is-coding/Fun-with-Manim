@@ -12,5 +12,5 @@ config.frame_height = 8
 
 class XKCDStandingAssetPreview(Scene):
     def construct(self) -> None:
-        character = SVGMobject(ASSET_PATH, height=6.8).move_to(ORIGIN)
+        character = SVGMobject(ASSET_PATH, height=6.78).move_to(ORIGIN)
         self.add(character)
