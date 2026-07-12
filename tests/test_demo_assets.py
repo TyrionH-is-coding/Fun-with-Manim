@@ -71,3 +71,15 @@ def test_leg_joint_matches_reference_vertical_proportion() -> None:
     ]
     ratios = [(point.y - head_bottom) / head_height for point in leg_points]
     assert all(0.65 <= ratio <= 0.80 for ratio in ratios)
+
+
+def test_leg_length_compensates_for_rendered_stroke_thickness() -> None:
+    root = ET.parse(SVG_PATH).getroot()
+    _, head_top, _, head_bottom = _group_path(root, "head").bbox()
+    head_height = head_bottom - head_top
+    leg_paths = [_group_path(root, group_id) for group_id in ("left-leg", "right-leg")]
+    ratios = [
+        (leg_path.bbox()[3] - leg_path.first_point.y) / head_height
+        for leg_path in leg_paths
+    ]
+    assert all(ratio >= 1.14 for ratio in ratios)
