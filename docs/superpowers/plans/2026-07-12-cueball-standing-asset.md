@@ -1,8 +1,10 @@
 # Cueball Standing Asset Implementation Plan
 
+> **Status:** Completed. The code snippets and intermediate pass counts below document the initial implementation and must not be replayed as the current asset recipe. The calibrated source of truth is `docs/superpowers/specs/2026-07-12-cueball-standing-asset-design.md`: SVG stroke width 17, Manim height 6.78, seven standing-asset tests, and final 512 × 1024 PNG pixel checks.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Add a reusable straight-arm standing Cueball SVG with line width 12 and a transparent vertical PNG preview.
+**Goal:** Add a reusable straight-arm standing Cueball SVG calibrated against the supplied reference and a transparent vertical PNG preview.
 
 **Architecture:** Keep the pose independent from the existing dialogue asset. Define all six body parts as named SVG groups, load that SVG in a dedicated Manim scene, and render a transparent 512×1024 preview without text or props.
 

@@ -4,7 +4,6 @@ from xml.etree import ElementTree as ET
 import numpy as np
 from PIL import Image
 from scipy import ndimage
-from skimage.morphology import skeletonize
 from svgelements import Path as SVGPath
 
 
@@ -115,12 +114,9 @@ def test_standing_png_matches_four_x_reference_pixels() -> None:
     assert 292 <= figure_width <= 308
     assert 870 <= figure_height <= 882
 
-    skeleton = skeletonize(dark)
-    neighbors = (
-        ndimage.convolve(skeleton.astype(int), np.ones((3, 3), dtype=int), mode="constant")
-        - skeleton
-    )
-    visible_widths = 2 * ndimage.distance_transform_edt(dark)[skeleton & (neighbors <= 2)]
+    distances = ndimage.distance_transform_edt(dark)
+    stroke_ridge = dark & (distances == ndimage.maximum_filter(distances, size=3))
+    visible_widths = 2 * distances[stroke_ridge]
     assert 22 <= float(np.median(visible_widths)) <= 25
 
     white = (
