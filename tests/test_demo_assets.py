@@ -41,7 +41,7 @@ def _group_path(root: ET.Element, group_id: str) -> SVGPath:
 def test_character_uses_bold_strokes() -> None:
     root = ET.parse(SVG_PATH).getroot()
     style_group = next(element for element in root if element.tag.endswith("g"))
-    assert float(style_group.attrib["stroke-width"]) >= 8
+    assert float(style_group.attrib["stroke-width"]) >= 10
 
 
 def test_head_is_visibly_taller_than_wide() -> None:
@@ -59,3 +59,15 @@ def test_arms_and_torso_share_the_head_base_joint() -> None:
     ]
     assert max(point.x for point in joint_points) - min(point.x for point in joint_points) <= 2
     assert all(abs(point.y - head_bottom) <= 4 for point in joint_points)
+
+
+def test_leg_joint_matches_reference_vertical_proportion() -> None:
+    root = ET.parse(SVG_PATH).getroot()
+    _, head_top, _, head_bottom = _group_path(root, "head").bbox()
+    head_height = head_bottom - head_top
+    leg_points = [
+        _group_path(root, group_id).first_point
+        for group_id in ("left-leg", "right-leg")
+    ]
+    ratios = [(point.y - head_bottom) / head_height for point in leg_points]
+    assert all(0.65 <= ratio <= 0.80 for ratio in ratios)

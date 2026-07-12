@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 420">
-  <g fill="none" stroke="#111111" stroke-width="8"
+  <g fill="none" stroke="#111111" stroke-width="10"
      stroke-linecap="round" stroke-linejoin="round">
     <g id="torso">
-      <path d="M130 133 C128 164 131 205 132 255"/>
+      <path d="M130 133 C128 158 131 188 132 214"/>
     </g>
     <g id="left-arm">
       <path d="M130 133 C114 158 99 194 78 207 C68 213 58 212 48 216"/>
@@ -12,10 +12,10 @@
       <path d="M130 133 C145 158 153 194 164 221"/>
     </g>
     <g id="left-leg">
-      <path d="M132 254 C122 281 112 317 102 365"/>
+      <path d="M132 214 C122 242 112 283 102 331"/>
     </g>
     <g id="right-leg">
-      <path d="M132 254 C143 282 157 318 171 360"/>
+      <path d="M132 214 C143 242 157 284 171 330"/>
     </g>
     <g id="head" fill="#ffffff">
       <path d="M130 20 C104 18 86 35 83 66 C80 97 97 123 123 131 C150 136 171 116 176 84 C181 53 169 27 147 21 C141 19 135 19 130 20 Z"/>
